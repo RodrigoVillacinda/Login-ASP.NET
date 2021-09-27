@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "11756f7c-2348-4951-bf1b-609410977207",
+		"name": "RegisterLogin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"name\" : \"Jose Lopez\",\r\n \"email\" : \"jose@gmail.com\",\r\n \"password\" : \"123456\",\r\n \"token\" : \"asddscxv\",\r\n \"last_login\": \"2021-09-24T08:50:34.843Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44380/api/signin",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44380",
+					"path": [
+						"api",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
