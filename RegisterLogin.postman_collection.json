@@ -8,10 +8,35 @@
 		{
 			"name": "login",
 			"request": {
-				"method": "GET",
-				"header": [],
+				"method": "POST",
+				"header": [
+					{
+						"key": "SecretKey",
+						"value": "123456",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"email\" : \"jose@gmail.com\",\r\n \"password\" : \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": ""
+					"raw": "https://localhost:44380/v1/api/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44380",
+					"path": [
+						"v1",
+						"api",
+						"login"
+					]
 				}
 			},
 			"response": []
@@ -20,10 +45,16 @@
 			"name": "signin",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "SecretKey",
+						"value": "123456",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n \"name\" : \"Jose Lopez\",\r\n \"email\" : \"jose@gmail.com\",\r\n \"password\" : \"123456\",\r\n \"token\" : \"asddscxv\",\r\n \"last_login\": \"2021-09-24T08:50:34.843Z\"\r\n}",
+					"raw": "{\r\n \"name\" : \"Jose Lopez\",\r\n \"email\" : \"jose@gmail.com\",\r\n \"password\" : \"123456\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -31,13 +62,14 @@
 					}
 				},
 				"url": {
-					"raw": "https://localhost:44380/api/signin",
+					"raw": "https://localhost:44380/v1/api/signin",
 					"protocol": "https",
 					"host": [
 						"localhost"
 					],
 					"port": "44380",
 					"path": [
+						"v1",
 						"api",
 						"signin"
 					]
